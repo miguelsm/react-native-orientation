@@ -31,6 +31,11 @@ module.exports = {
       cb(error, orientation);
     });
   },
+  isLocked(cb) {
+    Orientation.isLocked(isLocked => {
+      cb(isLocked);
+    });
+  },
   lockToPortrait() {
     Orientation.lockToPortrait();
   },
