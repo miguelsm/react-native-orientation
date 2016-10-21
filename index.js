@@ -31,8 +31,8 @@ module.exports = {
       cb(error, orientation);
     });
   },
-  isLocked(cb) {
-    Orientation.isLocked(isLocked => {
+  getIsLocked(cb) {
+    Orientation.getIsLocked(isLocked => {
       cb(isLocked);
     });
   },
