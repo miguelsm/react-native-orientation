@@ -76,7 +76,7 @@ public class OrientationModule extends ReactContextBaseJavaModule implements Lif
         if (activity == null) {
             return;
         }
-        final bool isLocked = activity.getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED;
+        final bool isLocked = activity.getRequestedOrientation() != ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED;
         callback.invoke(isLocked);
     }
 
