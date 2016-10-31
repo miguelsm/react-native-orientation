@@ -44,6 +44,12 @@ static UIInterfaceOrientationMask _orientation = UIInterfaceOrientationMaskAllBu
 - (NSString *)getOrientationStr: (UIDeviceOrientation)orientation {
   NSString *orientationStr;
   switch (orientation) {
+    case UIDeviceOrientationFaceUp:
+      orientationStr = @"FACEUP";
+      break;
+    case UIDeviceOrientationFaceDown:
+       orientationStr = @"FACEDOWN";
+       break;
     case UIDeviceOrientationPortrait:
       orientationStr = @"PORTRAIT";
       break;
@@ -81,6 +87,14 @@ static UIInterfaceOrientationMask _orientation = UIInterfaceOrientationMaskAllBu
 
     case UIDeviceOrientationPortraitUpsideDown:
       orientationStr = @"PORTRAITUPSIDEDOWN";
+      break;
+
+    case UIDeviceOrientationFaceUp:
+      orientationStr = @"FACEUP";
+      break;
+
+    case UIDeviceOrientationFaceDown:
+      orientationStr = @"FACEDOWN";
       break;
 
     default:
